@@ -6,7 +6,7 @@ This project focuses looking at the overall vaccination coverage among adolescen
 
 Run "make" to execute all rules necessary below to build the report.
 
-Install Necessary Packages: make Install
+Install Necessary Packages: make install
 
 Build the report: make Final_Project.html
 
