@@ -30,9 +30,11 @@ table1.R: Code for creating table1
 
 Render_Final_Report: Code for automatically knitting the final RMarkdown Document
 
-## Dockerfile
+## Dockerfile and Building the Image
 
 Includes all code to build the report in a container from a docker image.
+
+Building the image: docker build -t dtrudel17/finalproject .
 
 ## RENV
 
