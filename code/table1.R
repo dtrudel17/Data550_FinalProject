@@ -7,7 +7,7 @@ pacman::p_load(data.table, dplyr, tidyr, tidyverse, ggplot2, knitr, flextable)
 
 #get data as a data.table
 #note: column names with spaces will need to be typed within ``
-here::i_am("code/table1.r")
+here::i_am("code/table1.R")
 og <- fread(here::here("Raw_Data/TeenVaccineData.csv"))
 
 #rename one column

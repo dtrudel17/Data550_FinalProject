@@ -4,11 +4,15 @@ This project focuses looking at the overall vaccination coverage among adolescen
 
 ## Building The Report
 
-Run "make" to execute all rules necessary below to build the report.
+
+MacOS: run "make report_m"" if using a Mac machine.
+Windows: run "make report_w" if using a Windows machine
+
+## Other Makefile Rules
 
 Install Necessary Packages: make install
 
-Build the report: make Final_Project.html
+Build the report on your local machine outside of a container: make Final_Project.html
 
 Create the output of table1: make Output/table_1.rds
 
@@ -25,6 +29,14 @@ graph1.R: Code for creating graph1
 table1.R: Code for creating table1
 
 Render_Final_Report: Code for automatically knitting the final RMarkdown Document
+
+## Dockerfile
+
+Includes all code to build the report in a container from a docker image.
+
+## RENV
+
+Includes all relevant files to keep R packages up to date.
 
 
 

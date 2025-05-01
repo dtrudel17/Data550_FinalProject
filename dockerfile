@@ -43,9 +43,9 @@ RUN mkdir Raw_Data
 RUN mkdir final_report
 
 COPY Raw_Data/TeenVaccineData.csv Raw_Data
-COPY Code/graph1.R code
-COPY Code/Render_Final_Report.R code
-COPY Code/table1.R code
+COPY code/graph1.R code
+COPY code/Render_Final_Report.R code
+COPY code/table1.R code
 
 CMD make && mv Final_Project.html final_report
 

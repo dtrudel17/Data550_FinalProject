@@ -1,23 +1,34 @@
 #! add a rule to build the report
 
-Final_Project.html: Final_Project.Rmd Output/table_1.rds Output/graph1.png Code/Render_Final_Report.R
-	Rscript Code/Render_Final_Report.R
+Final_Project.html: Final_Project.Rmd output/table_1.rds output/graph1.png code/Render_Final_Report.R
+	Rscript code/Render_Final_Report.R
 
 .PHONY: install
 install:
+	Rscript -e "renv::activate()"
 	Rscript -e "renv::restore(prompt = FALSE)"
 
 
 #! add a rule to create the output of table1
-Output/table_1.rds: Code/table1.R
-	Rscript Code/table1.R
+output/table_1.rds: code/table1.R
+	Rscript code/table1.R
 
 #! add a rule to create the output of graph1
-Output/graph1.png: Code/graph1.R
-	Rscript Code/graph1.R
+output/graph1.png: code/graph1.R
+	Rscript code/graph1.R
 
 #! add a PHONY target for removing files from output
 .PHONY:clean
 clean:
-	rm Output/*
+	rm final_report/*
+	rm output/*
+	
+		
+#! RULES TO BUILD AUTOMATICALLY IN CONTAINER	
+
+report_m:
+	docker run -v "$$(pwd)"/final_report:/home/rstudio/project/final_report dtrudel17/finalproject
+	
+report_w:
+	docker run -v "/$$(pwd)"/final_report:/home/rstudio/project/final_report dtrudel17/finalproject
 	
