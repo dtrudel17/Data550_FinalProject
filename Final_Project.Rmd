@@ -41,6 +41,6 @@ The line chart below shows the weighted averaages of vaccine coverage by vaccine
 knitr::include_graphics(here::here("output/graph1.png"))
 ```
 
-##Results
+## Results
 
 Vaccination coverage among all types of vaccines has been increasing since 2014 in adolescents. Of these vaccinations, HPV has the lowest coverage rate and has plateaued in recent years. The HPV vaccine prevents the human papilloma virus, as well known cause of various cancers among women. There is often stigma associated with HPV due it being classified as an STI. Future interventions should focus on de-stigmitizing this vaccine and encourage more parents to vaccinate their children against HPV during their teenage years when it is most effective.
