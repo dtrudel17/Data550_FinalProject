@@ -36,7 +36,7 @@ Includes all code to build the report in a container from a docker image.
 
 ## RENV
 
-Includes all relevant files to keep R packages up to date.
+Includes all relevant files to keep R packages up to date. 
 
 
 
